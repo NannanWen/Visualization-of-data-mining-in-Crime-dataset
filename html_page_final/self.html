@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- Link in the stylesheet and my favicon, fabulously created in photoshop in all of 5 minutes, haha, as well as some free fonts from google -->
+		<link rel="stylesheet" type="text/css" href="stylesheet.css">
+		<link rel="icon" type="image/png" href="assets/fa.png"> -->
+		<!--<link href="https://fonts.googleapis.com/css?family=Montserrat|Questrial" rel="stylesheet"> -->
+		
+		<title>Allegheny County CrimeWatch</title>
+	</head>
+	<body>
+		<!-- The main div is the translucent one that holds everything -->
+		<div id="main">
+			<!-- Topbar for my name and "profile" picture -->
+			<div id="topbar">
+				<!--<img id="profile" src="assets/profile.jpg"> -->
+				<h1 class="header" id="introHead">Allegheny County <span style = "color:Red" >CrimeWatch</span></h1>
+				<p class="text center" ><em >How safe has your neighborhood been?</em></p>
+				
+			</div>
+			
+			<div id="content">
+				<!-- This div holds the image that I think is really cool -->
+				<div id="allegPhoto">
+					<img id="allegImage" src="assets/allegheny.jpg">
+				</div>
+				<br><br><br>
+				<p id = "question1">Year</p>
+				<div id ="input1">
+					<input type="radio" name="year" value="2013" required> 2013
+					<input type="radio" name="year" value="2014"> 2014
+					<input type="radio" name="year" value="2014"> 2015
+					<input type="radio" name="year" value="2014"> 2016
+					<input type="radio" name="year" value="2014"> 2017<br><br>
+				</div>
+				<p id = "question2">Crime Type</p>
+				<div id ="input2">
+					<input type="radio" name="type" value="TYPE_1" required> FIRST DEGREE<br><br>
+					<input type="radio" name="type" value="TYPE_2"> SECOND DEGREE<br><br>
+					<input type="radio" name="type" value="TYPE_3"> MINOR CRIMES<br><br>
+					<input type="radio" name="type" value="TYPE_4"> ALL OF THE ABOVE TYPES <br><br>
+					
+				</div>
+				<div id = "submit">
+					<input type="submit" name = submit></input>
+				</div>
+				
+				
+			</div>
+
+			
+		</div>
+	
+	<script>
+		
+		document.getElementById("submit").addEventListener("click", display);
+		function display()
+		{
+			var radios = document.getElementsByName('year');
+			var year;
+			for (var i = 0, length = radios.length; i < length; i++)
+			{
+			 if (radios[i].checked)
+			 {
+				// do whatever you want with the checked radio
+				year = radios[i].value;
+				// only one radio can be logically checked, don't check the rest
+				break;
+			 }
+			}
+			var radios_2 = document.getElementsByName('type');
+			var type;
+			for (var i = 0, length = radios_2.length; i < length; i++)
+			{
+				if (radios_2[i].checked)
+				{
+					// do whatever you want with the checked radio
+					type = radios_2[i].value;
+					// only one radio can be logically checked, don't check the rest
+					break;
+				}
+			}
+			
+			if(year == "2013" && type =="TYPE_1")
+				location.href = "map/interactive_map_f1_2013.html";
+			else if (year == "2013" && type =="TYPE_2")
+				location.href = "map/interactive_map_f2_2013.html";
+			else if (year == "2013" && type =="TYPE_3")
+				location.href = "map/interactive_map_f3_2013.html";
+			else if (year == "2013" && type =="TYPE_4")
+				location.href = "map/interactive_map_all_2013.html";
+			
+			else if(year == "2014" && type =="TYPE_1")
+				location.href = "map/interactive_map_f1_2014.html";
+			else if (year == "2014" && type =="TYPE_2")
+				location.href = "map/interactive_map_f2_2014.html";
+			else if (year == "2014" && type =="TYPE_3")
+				location.href = "map/interactive_map_f3_2014.html";
+			else if (year == "2014" && type =="TYPE_4")
+				location.href = "map/interactive_map_all_2014.html";
+			
+			else if(year == "2015" && type =="TYPE_1")
+				location.href = "map/interactive_map_f1_2015.html";
+			else if (year == "2015" && type =="TYPE_2")
+				location.href = "map/interactive_map_f2_2015.html";
+			else if (year == "2015" && type =="TYPE_3")
+				location.href = "map/interactive_map_f3_2015.html";
+			else if (year == "2015" && type =="TYPE_4")
+				location.href = "map/interactive_map_all_2015.html";
+			
+			else if(year == "2016" && type =="TYPE_1")
+				location.href = "map/interactive_map_f1_2016.html";
+			else if (year == "2016" && type =="TYPE_2")
+				location.href = "map/interactive_map_f2_2016.html";
+			else if (year == "2016" && type =="TYPE_3")
+				location.href = "map/interactive_map_f3_2016.html";
+			else if (year == "2016" && type =="TYPE_4")
+				location.href = "map/interactive_map_all_2016.html";
+			
+			else if(year == "2017" && type =="TYPE_1")
+				location.href = "map/interactive_map_f1_2017.html";
+			else if (year == "2017" && type =="TYPE_2")
+				location.href = "map/interactive_map_f2_2017.html";
+			else if (year == "2017" && type =="TYPE_3")
+				location.href = "map/interactive_map_f3_2017.html";
+			else if (year == "2017" && type =="TYPE_4")
+				location.href = "map/interactive_map_all_2017.html";
+			
+			
+			
+			
+			else
+				alert("Please select a Crime Type/Year!");
+		}
+		
+	</script>
+		
+	</body>
+</html>

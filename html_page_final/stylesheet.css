@@ -1,0 +1,182 @@
+body
+{
+	background-image: url("assets/sketch.jpg");
+	background-size: cover;
+	background-repeat:  repeat-y;
+	height:100%;
+	width: 100%;
+	float:left;
+	margin: 0;
+	color:#222;
+}
+
+html
+{
+	height:100%;
+	width: 100%;
+	margin:0;
+}
+
+#main
+{
+	margin-top:50px;
+	width: 80%;
+	margin-left:auto;
+	margin-right: auto;
+	margin-bottom: 50px;
+	/*padding:10px; padding makes scrollbar appear for some reason thanks chrome */
+	background-color:rgba(200,200,200,.4);
+	min-height: calc(100% - 100px);
+	border-radius:5px;
+	min-width:500px;
+	overflow: auto;
+	box-shadow: 0px 0px 5px 2px rgba(0,0,0,.3);
+}
+
+.header
+{
+	font-family: 'Montserrat', sans-serif;
+	text-align:center;
+}
+
+h1
+{
+	font-size:4em;
+	margin:20px;
+	text-align: center
+}
+
+.text
+{
+	font-family: 'Questrial', sans-serif;
+	font-size: 1.3em;
+	text-align: justify; 
+}
+
+#content
+{
+	margin-top: 20px;
+	margin-left: 30px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+}
+#question1
+{
+	margin-top: 2px;
+	margin-left: 75px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	font-size: 30px;
+}
+#question2
+{
+	margin-top: 5px;
+	margin-left: 75px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	font-size: 30px;
+}
+#input1
+{
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+#input2
+{
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	font-size: 20px;
+}
+#submit
+{
+	margin-top: 20px;
+	margin-left: 100px;
+	margin-right: 30px;
+	margin-bottom: 15px;
+	font-size: 20px;
+	width: 50em;  
+	height: 2em;
+	
+}
+ 
+
+#topbar
+{
+	margin-left:auto;
+	margin-right:auto;
+	padding-top:20px;
+	width:80%;
+}
+
+
+#introHead
+{
+	display:inline;
+	transition:.5s;
+}
+#introHead:hover
+{
+	text-shadow: 2px 2px 8px #333;
+	transition:.5s;
+}
+
+
+.center
+{
+	text-align:center;
+}
+
+.left
+{
+	text-align:left;
+}
+
+
+#allegPhoto
+{
+	float:right;
+	width:40%;
+	max-width:1500px;
+	height:auto;
+}
+#allegImage
+{
+	width:100%;
+	max-width:1033px;
+	margin-left:10px;
+	margin-top:20px;
+	margin-right:30px;
+	height:auto;
+	box-shadow: none;
+	transition: .5s;
+}
+#allegImage:hover
+{
+	box-shadow: 1px 1px 10px 3px #333;
+	width:101%;
+	transition: .5s;
+}
+
+::-webkit-scrollbar 
+{
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb 
+{
+    background-color: rgba(40,40,40,.4); 
+}
+::-webkit-scrollbar-thumb:hover 
+{
+    background-color: rgba(40,40,40,.8); 
+}
+::-webkit-scrollbar-track 
+{
+    background-color: rgba(200,200,200,.4); 
+}
+
